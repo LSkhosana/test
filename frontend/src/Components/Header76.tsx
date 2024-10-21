@@ -39,7 +39,7 @@ export const Header76 = (props: Header76Props) => {
 
   return (
     <section
-      id="relume"
+      id="header"
       className="grid grid-cols-1 gap-y-16 pt-16 md:grid-flow-row md:pt-24 lg:grid-flow-col lg:grid-cols-2 lg:items-center lg:pt-0"
     >
       <div className="mx-[5%] max-w-[40rem] justify-self-start lg:ml-[5vw] lg:mr-20 lg:justify-self-end">

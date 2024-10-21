@@ -10,25 +10,27 @@ import { Footer1 } from '../Components/Footer1';
 import header from '../Assets/heading.png';
 
 const Home: React.FC = () => {
-  const logo = {
-    url: "#",
-    src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
-    alt: "Logo image",
-  };
+  // const logo = {
+  //   url: "#",
+  //   src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
+  //   alt: "Logo image",
+  // };
 
-  const navLinks = [
-    { title: "Home", url: "#" },
-    { title: "About", url: "#" },
-    { title: "Services", url: "#" },
-    { title: "Pricing", url: "#" },
-  ];
+  // const navLinks = [
+  //   { title: "Home", url: "/" },
+  //   { title: "About", url: "#header" },
+  //   { title: "Services", url: "#" },
+  //   { title: "Pricing", url: "/contact" },
+  // ];
 
-  const buttons = [
-    {
-      title: "Contact Us",
-      size: "sm",
-    },
-  ];
+  // const buttons = [
+  //   {
+  //     title: "Contact Us",
+  //     size: "sm",
+  //     url: "/contact",
+
+  //   },
+  // ];
 
   // Header5 props
   const headerData: Header5Props = {
@@ -48,7 +50,7 @@ const Home: React.FC = () => {
   
   return (
     <div>
-      <Navbar2 logo={logo} navLinks={navLinks} buttons={buttons} />
+      <Navbar2 />
       <Header5 {...headerData} />
       <Header76 />
       <Features/>

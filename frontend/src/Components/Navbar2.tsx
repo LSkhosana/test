@@ -5,6 +5,8 @@ import { Button, useMediaQuery } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
+import { Link } from 'react-router-dom';
+
 
 type ImageProps = {
   url?: string;
@@ -101,9 +103,11 @@ export const Navbar2 = (props: Navbar2Props) => {
         </motion.div>
         <div className="hidden justify-self-end lg:block">
           {buttons.map((button, index) => (
-            <Button key={index} className="px-6 py-2  bg-orange-500 border-none" {...button}>
-              {button.title}
-            </Button>
+            <Link to={button.url} key={index}>
+              <Button className="px-6 py-2 bg-orange-500 border-none" {...button}>
+                {button.title}
+              </Button>
+            </Link>
           ))}
         </div>
       </div>
@@ -179,23 +183,16 @@ export const Navbar2Defaults: Navbar2Props = {
     alt: "Logo image",
   },
   navLinks: [
-    { title: "Link One", url: "#" },
-    { title: "Link Two", url: "#" },
-    { title: "Link Three", url: "#" },
-    {
-      title: "Link Four",
-      url: "#",
-      subMenuLinks: [
-        { title: "Link Five", url: "#" },
-        { title: "Link Six", url: "#" },
-        { title: "Link Seven", url: "#" },
-      ],
-    },
+    { title: "Home", url: "/" },
+    { title: "About", url: "#header" },
+    { title: "Services", url: "#features" },
+   
   ],
   buttons: [
     {
-      title: "Button",
+      title: "Contact Us",
       size: "sm",
+      url: "/contact",
     },
   ],
 };

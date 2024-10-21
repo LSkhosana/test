@@ -34,7 +34,7 @@ export const features = (props: featuresProps) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="features" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid auto-cols-fr grid-cols-1 items-start justify-start gap-y-12 md:grid-cols-[0.5fr_1fr] md:gap-x-12 md:gap-y-16 lg:gap-x-20">
           <div>
