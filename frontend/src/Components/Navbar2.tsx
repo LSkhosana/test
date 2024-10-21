@@ -47,9 +47,11 @@ export const Navbar2 = (props: Navbar2Props) => {
           <div className="flex items-center gap-4 lg:hidden">
             <div>
               {buttons.map((button, index) => (
-                <Button key={index} className="w-full px-4 py-1 bg-orange-500 border-none" {...button}>
-                  {button.title}
-                </Button>
+                 <Link to={button.url} key={index}>
+                 <Button className="px-6 py-2 bg-orange-500 border-none" {...button}>
+                   {button.title}
+                 </Button>
+               </Link>
               ))}
             </div>
             <button
