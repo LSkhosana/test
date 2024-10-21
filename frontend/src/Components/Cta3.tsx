@@ -1,6 +1,8 @@
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import back from '../Assets/printer-with-picture-mountain-it-1024x585 1.png'
+import { Link } from 'react-router-dom';
+
 
 type ImageProps = {
   src: string;
@@ -31,9 +33,11 @@ export const Cta3 = (props: Cta3Props) => {
           <p className="text-base text-text-alternative md:text-md">{description}</p>
           <div className="mt-6 flex gap-x-4 md:mt-8">
             {buttons.map((button, index) => (
-              <Button key={index} className="  bg-orange-500 border-none" {...button}>
-                {button.title}
-              </Button>
+               <Link to={button.url} key={index}>
+               <Button key={index} className="  bg-orange-500 border-none"{...button}>
+                 {button.title}
+               </Button>
+               </Link>
             ))}
           </div>
         </div>
@@ -54,7 +58,11 @@ export const Cta3Defaults: Cta3Props = {
       ),
   description:
     " Let's work together to create marketing materials that represent your brand and inspire and engage your audience.",
-  buttons: [{ title: "Button" }],
+  buttons: [
+    { title: "Get Started",
+      url: "/contact",
+    }
+  ],
   image: {
     src: back,
     alt: "Relume placeholder image",

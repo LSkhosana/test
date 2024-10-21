@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Input, Label, Checkbox, Textarea, Button } from "@relume_io/relume-ui";
+import { Input, Label, Textarea, Button } from "@relume_io/relume-ui"; //add check box if needed
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 
@@ -27,7 +27,7 @@ export const Contact5 = (props: Contact5Props) => {
   const [emailInput, setEmailInput] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
-  const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(false);
+  // const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(false);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,7 +36,7 @@ export const Contact5 = (props: Contact5Props) => {
       emailInput,
       phoneInput,
       messageInput,
-      acceptTerms,
+      // acceptTerms,
     });
   };
 
@@ -120,18 +120,18 @@ export const Contact5 = (props: Contact5Props) => {
           </div>
 
           <div className="mb-3 flex items-center space-x-2 text-sm md:mb-4">
-            <Checkbox id="terms" checked={acceptTerms} onCheckedChange={setAcceptTerms} />
+            {/* <Checkbox id="terms" checked={acceptTerms} onCheckedChange={setAcceptTerms} />
             <Label htmlFor="terms" className="cursor-pointer">
               I accept the{" "}
-              {/* <a
+              <a
                 className="text-link-primary underline"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Terms
-              </a> */}
-            </Label>
+              </a> 
+            </Label> */}
           </div>
 
           <div>

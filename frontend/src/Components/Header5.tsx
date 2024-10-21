@@ -1,5 +1,9 @@
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
+import header from '../Assets/heading.png';
+import { Link } from 'react-router-dom';
+
+
 
 type ImageProps = {
   src: string;
@@ -30,17 +34,38 @@ export const Header5 = (props: Header5Props) => {
             </h1>
             <p className="text-base text-text-alternative md:text-md">{description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
-                {buttons.map((button, index) => (
+              {buttons.map((button, index) => (
+                button.url ? (
+                  <Link key={index} to={button.url}>
                     <Button
+                      className={`px-6 py-2 border-none ${
+                        button.title === "Get Started"
+                          ? "bg-orange-500"
+                          : button.variant === "secondary-alt"
+                          ? "border-[1px] border-b-gray-50"
+                          : ""
+                      }`}
+                      {...button}
+                    >
+                      {button.title}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
                     key={index}
                     className={`px-6 py-2 border-none ${
-                        button.title === "Get Started" ? "bg-orange-500" : button.variant === "secondary-alt" ? "border-[1px] border-b-gray-50" : ""
+                      button.title === "Get Started"
+                        ? "bg-orange-500"
+                        : button.variant === "secondary-alt"
+                        ? "border-[1px] border-b-gray-50"
+                        : ""
                     }`}
                     {...button}
-                    >
+                  >
                     {button.title}
-                    </Button>
-                ))}
+                  </Button>
+                )
+              ))}
             </div>
 
           </div>
@@ -55,12 +80,18 @@ export const Header5 = (props: Header5Props) => {
 };
 
 export const Header5Defaults: Header5Props = {
-  heading: "Medium length hero heading goes here",
+  heading: "Elevate Your Brand, Simplify Your Success",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-  buttons: [{ title: "Button" }, { title: "Button", variant: "secondary-alt" }],
+    "We provide the best services to help you grow your business. At Easy Branding, we specialize in creating unique branded merchandise that elevates your business identity. From promotional products to printed marketing materials, we help you make a lasting impression.",
+  buttons: 
+  [
+    { title: "Get Started",
+      url:"/contact",
+     }, 
+    { title: "100+ Clients", variant: "secondary-alt" }
+  ],
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: header,
     alt: "Relume placeholder image",
   },
 };

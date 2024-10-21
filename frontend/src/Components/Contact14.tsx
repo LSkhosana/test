@@ -3,6 +3,8 @@ import type { ButtonProps } from "@relume_io/relume-ui";
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 import { RxChevronRight } from "react-icons/rx";
+import ways from '../Assets/Screenshot 2024-10-21 101322.png'
+
 
 type ImageProps = {
   src: string;
@@ -61,6 +63,7 @@ export const Contact14 = (props: Contact14Props) => {
                 <p className="mb-2">{contact.description}</p>
                 {contact.title === "Office" && contact.button ? (
                   <div className="mt-5 md:mt-6">
+                    
                     <Button {...contact.button}>{contact.button.title}</Button>
                   </div>
                 ) : (
@@ -116,6 +119,7 @@ export const Contact14Defaults: Contact14Props = {
       description: "61 camel thorn street fleurhof views unit B206 fleurhof, Florida 1709",
       button: {
         title: "Get Directions",
+        url: "https://www.google.com/maps/place/Fleurhof+Views+Madulammoho+Housing/@-26.2632534,27.8121612,16.64z/data=!4m6!3m5!1s0x1e95a08e85e9f51b:0x93eeddd549ecbb05!8m2!3d-26.2632233!4d27.8129871!16s%2Fg%2F11cryfz9mn?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
         variant: "link",
         size: "link",
         iconRight: <RxChevronRight />,
@@ -123,9 +127,9 @@ export const Contact14Defaults: Contact14Props = {
     },
   ],
   map: {
-    url: "#",
+    url: "https://www.google.com/maps/place/Fleurhof+Views+Madulammoho+Housing/@-26.2632534,27.8121612,16.64z/data=!4m6!3m5!1s0x1e95a08e85e9f51b:0x93eeddd549ecbb05!8m2!3d-26.2632233!4d27.8129871!16s%2Fg%2F11cryfz9mn?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
     image: {
-      src: "https://relume-assets.s3.us-east-1.amazonaws.com/placeholder-map-image.svg",
+      src: ways,
       alt: "Relume placeholder map image",
     },
   },

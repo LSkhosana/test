@@ -15,6 +15,8 @@ import img11 from '../Assets/IMG-20241011-WA0018.png';
 import img12 from '../Assets/IMG-20241011-WA0019.png';
 import img13 from '../Assets/IMG-20241011-WA0020.png';
 import img15 from '../Assets/IMG-20241011-WA0022.png';
+import { Link } from 'react-router-dom';
+
 
 
 type ImageProps = {
@@ -47,9 +49,11 @@ export const Header76 = (props: Header76Props) => {
         <p className="md:text-md">{description}</p>
         <div className="mt-6 flex gap-x-4 md:mt-8">
           {buttons.map((button, index) => (
+            <Link to={button.url} key={index}>
             <Button key={index} className="  bg-orange-500 border-none"{...button}>
               {button.title}
             </Button>
+            </Link>
           ))}
         </div>
       </div>
@@ -107,7 +111,12 @@ export const Header76Defaults: Header76Props = {
       and fun.
     </>
   ),
-  buttons: [{ title: "Button" }],
+  buttons: 
+  [
+    { title: "Get Started",
+      url: "/contact"
+    }
+  ],
   images: [
     {
       src: img1,
