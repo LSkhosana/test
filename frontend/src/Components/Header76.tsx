@@ -1,6 +1,21 @@
 // Header76.tsx
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
+import img1 from '../Assets/IMG-20241011-WA0008.png';
+import img2 from '../Assets/IMG-20241011-WA0009.png';
+import img3 from '../Assets/IMG-20241011-WA0010.png';
+import img4 from '../Assets/IMG-20241011-WA0011.png';
+import img5 from '../Assets/IMG-20241011-WA0012.png';
+import img6 from '../Assets/IMG-20241011-WA0013.png';
+import img7 from '../Assets/IMG-20241011-WA0014.png';
+import img8 from '../Assets/IMG-20241011-WA0015.png';
+import img9 from '../Assets/IMG-20241011-WA0016.png';
+import img10 from '../Assets/IMG-20241011-WA0017.png';
+import img11 from '../Assets/IMG-20241011-WA0018.png';
+import img12 from '../Assets/IMG-20241011-WA0019.png';
+import img13 from '../Assets/IMG-20241011-WA0020.png';
+import img15 from '../Assets/IMG-20241011-WA0022.png';
+
 
 type ImageProps = {
   src: string;
@@ -73,33 +88,77 @@ export const Header76 = (props: Header76Props) => {
 };
 
 export const Header76Defaults: Header76Props = {
-  heading: "Medium length hero heading goes here",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-  buttons: [{ title: "Button" }, { title: "Button", variant: "secondary" }],
+  heading: (
+    <>
+      Branding Made
+      <br /> Easy
+    </>
+  ),  
+  description: (
+    <>
+      Welcome to Easy Branding, where your brand's potential meets our passion
+      for perfection! At Easy Branding, we believe that every company, no
+      matter its size, deserves a standout identity.
+      <br />
+      <br />
+      We specialize in providing top-notch, company-branded marketing
+      materials designed to captivate and convert. With an energetic approach
+      and a commitment to excellence, we make branding effortless, impactful,
+      and fun.
+    </>
+  ),
+  buttons: [{ title: "Button" }],
   images: [
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img1,
       alt: "Relume placeholder image 1",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img2,
       alt: "Relume placeholder image 2",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img3,
       alt: "Relume placeholder image 3",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img4,
       alt: "Relume placeholder image 4",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img5,
       alt: "Relume placeholder image 5",
     },
     {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: img6,
+      alt: "Relume placeholder image 6",
+    },
+    {
+      src: img7,
+      alt: "Relume placeholder image 6",
+    },{
+      src: img8,
+      alt: "Relume placeholder image 6",
+    },{
+      src: img9,
+      alt: "Relume placeholder image 6",
+    },{
+      src: img10,
+      alt: "Relume placeholder image 6",
+    },
+    {
+      src: img11,
+      alt: "Relume placeholder image 6",
+    },{
+      src: img12,
+      alt: "Relume placeholder image 6",
+    },
+    {
+      src: img13,
+      alt: "Relume placeholder image 6",
+    },
+    {
+      src: img15,
       alt: "Relume placeholder image 6",
     },
   ],

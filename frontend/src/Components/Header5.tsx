@@ -21,9 +21,9 @@ export const Header5 = (props: Header5Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="relative px-[5%]">
+    <section id="relume" className="relative px-[5%] h-[45rem]">
       <div className="container">
-        <div className="flex max-h-[70rem] min-h-svh items-center py-16 md:py-24 lg:py-28 xl:min-h-20">
+        <div className="flex max-h-[70rem] min-h-svh items-center py-16 md:py-24 lg:py-28 2xl:min-h-70">
           <div className="max-w-md">
             <h1 className="mb-5 text-6xl font-bold text-text-alternative md:mb-6 md:text-9xl lg:text-10xl">
               {heading}
